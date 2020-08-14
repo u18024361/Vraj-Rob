@@ -1,0 +1,163 @@
+﻿
+    <div class="container" >
+        <span style="margin-left:96%;font-size:20px" class="glyphicon glyphicon-lock" data-toggle="modal" data-target="#logout"></span>
+
+        <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logoutCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteLongTitle">Delete Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Would you like to logout?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-secondary" onclick="location.href='@Url.Action("Login", "Login")'">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div style="float:right;margin-top:5rem;margin-right:20rem;">
+                    <h3> Admin</h3>
+
+                </div>
+                <i class="glyphicon glyphicon-user" style="font-size:100px; margin-top:3rem;"></i>
+            </div>
+
+
+            <div class="text-center col-md-2" style="margin-top:8rem;">
+
+
+            </div>
+
+            <div class="col-md-5">
+                <div>
+                    <i class="fas fa-lock"></i>
+                    <img style="width:45%; height:45%; float:right;" src="~/Pictures/logo_transparent.png" />
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h4 style="color:purple;"> Current Accounts </h4>
+            </div>
+            <div class="input-group col-md-5" style="float:right">
+                <input type="text" class="form-control" placeholder="Search for an account">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-bottom:2rem">
+            <table id="table" class="table  table-hover table-responsive"
+                   style="margin-left: auto;">
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Catergories</th>
+                    <th>Date Created</th>
+                    <th>Rating</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+
+                <tr>
+                    <td>Mike</td>
+                    <td>Active</td>
+                    <td>Plumbing</td>
+                    <td>01/02/2020 </td>
+                    <td>4</td>
+                    <td><button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Disable</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#delete">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Rob</td>
+                    <td>Active</td>
+                    <td>Photography</td>
+                    <td>05/04/2020 </td>
+                    <td>5</td>
+                    <td><button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Disable</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#delete">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Dhiren</td>
+                    <td>Active</td>
+                    <td>Plumbing</td>
+                    <td>09/08/2020 </td>
+                    <td>4</td>
+                    <td><button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Disable</button></td>
+                    <td><button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#delete">Delete</button></td>
+                </tr>
+
+            </table>
+
+        </div>
+        <div style="padding-bottom:9rem">
+            <div style="float:right;">
+                <button class="btn btn-primary btn-sm " onclick="location.href='@Url.Action("AdminCatergories", "Admin")'">Edit Categories</button>
+
+                <div style="padding-top:1rem">
+                    <button class="btn btn-primary btn-sm ">Print Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Disable Account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body center-block text-center text-info">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Reason for disabling</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" required>
+                        <option selected required>Choose...</option>
+                        <option value="1">Violent Content</option>
+                        <option value="2">Harmful Acts</option>
+                        <option value="3">Spam</option>
+                        <option value="4">Offensive Pictures</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="deleteCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteLongTitle">Delete Account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Confirm deleting of the account
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>

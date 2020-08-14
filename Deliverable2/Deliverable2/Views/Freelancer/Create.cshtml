@@ -1,0 +1,44 @@
+﻿
+<div class="row">
+    <div class="col-md-4">
+        <img style="width:70%; height:70%;" src="~/Pictures/Logo.jpeg" />
+    </div>
+
+
+
+    <div class="text-center col-md-4" style="margin-top:5rem;">
+        <h2> You are now registered</h2>
+    </div>
+
+    <div class="col-md-4">
+
+    </div>
+
+</div>
+
+
+<div class="row" style="padding-bottom:40px;">
+
+    <div style="float: left; width: 50%; ">
+        <div style="margin-left:17%">
+            <label for="#Desc">Enter a description of your work:</label>
+            <textarea type="text" class="form-control" id="Desc"
+                      placeholder="Enter text here" rows="10" cols="50" maxlength="100"
+                      style="width: 80%; height:90%; max-width: 100%;resize: none; border-radius: 10px;"></textarea>
+        </div>
+    </div>
+
+    <div style="float: right; width: 50%;">
+        <div style="margin-left:15%">
+            <label for="#Photo">Upload photos of your work</label>  <span><i class="glyphicon glyphicon-folder-open"></i></span>
+            <textarea type="text" class="form-control" id="Photo"
+                      placeholder="Photos will be displayed here:" rows="10" cols="50" maxlength="100"
+                      style="width: 80%; height: 90%; max-width: 100%; resize: none; border-radius: 10px;"></textarea>
+        </div>
+    </div>
+
+</div>
+<div style="padding-bottom:4%;margin-left:93rem">
+    <button class="btn btn-primary" onclick="window.location.href='@Url.Action("User_Profile", "Freelancer")'">Upload Portfolio</button>
+</div>
+
