@@ -158,6 +158,7 @@
     <Content Include="Pictures\plumber4.jpg" />
     <Content Include="Pictures\plumber5.jpg" />
     <Content Include="Pictures\plumber6.jpg" />
+    <Content Include="Pictures\transparent.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
