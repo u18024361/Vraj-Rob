@@ -199,7 +199,7 @@
     <Content Include="Views\Admin\AdminCatergories.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\Password.cshtml" />
-    <Content Include="Views\UserRegistration\FLUserReg.cshtml" />
+    <Content Include="Views\Freelancer\Employer_Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

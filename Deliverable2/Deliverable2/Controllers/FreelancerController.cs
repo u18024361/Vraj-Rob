@@ -28,6 +28,9 @@ namespace Deliverable2.Controllers
             return View();
         }
 
-       
+        public ActionResult Employer_Profile()
+        {
+            return View();
+        }
     }
 }
