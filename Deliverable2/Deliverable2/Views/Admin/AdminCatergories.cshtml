@@ -1,12 +1,27 @@
-﻿
-    <div class="container" style="background-color:lightgray">
-        <span style="margin-left:96%; margin-top:2rem; font-size:20px" class="glyphicon glyphicon-lock" data-toggle="modal" data-target="#logout"></span>
+﻿<div class="navbar bg-info navbar-expand-lg navbar-fixed-top" style="margin-bottom:5rem">
+    <div style="padding:4px">
+        <a class="navbar-brand" href="#">
+            <img src="~/Pictures/transparent.png" alt="logo" style="width:90px;">
+        </a>
+    </div>
+    <div style="margin-top:0.2rem; margin-left:80%">
+        <span class="navbar-text" style="padding-right:1rem">
+            Admin
+        </span>
+        <span> <i class="glyphicon glyphicon-user" style="font-size:35px;cursor:pointer "></i></span>
+        <span style="padding-left:2rem;font-size:25px;cursor:pointer" class="glyphicon glyphicon-log-out" data-toggle="modal" data-target="#logout"></span>
+    </div>
+</div>
+
+
+    <div class="container"style="padding-top:4rem" >
+    
 
         <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logoutCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="deleteLongTitle">Delete Account</h5>
+                        <h5 class="modal-title" id="deleteLongTitle">Logout</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -21,27 +36,8 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-5">
-                <div style="float:right;margin-top:5rem;margin-right:20rem;">
-                    <h3> Admin</h3>
-
-                </div>
-                <i class="glyphicon glyphicon-user" style="font-size:100px; margin-top:3rem;" onclick="location.href='@Url.Action("AdminHome", "Admin")' "></i>
-            </div>
-
-
-            <div class="text-center col-md-2" style="margin-top:8rem;">
-
-
-            </div>
-
-            <div class="col-md-5">
-                <div>
-                    <img style="width:45%; height:45%; float:right;" src="~/Pictures/logo_transparent.png" />
-                </div>
-            </div>
-        </div>
         <div class="col-md-5">
             <h4 style="color:purple;"> Current Business Catergories </h4>
         </div>
@@ -132,13 +128,13 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteLongTitle">Delete Account</h5>
+                <h5 class="modal-title" id="deleteLongTitle">Delete Category</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                Confirm deleting of this catergory 
+                Confirm deleting of this category 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
