@@ -1,31 +1,40 @@
-﻿<div class="container">
+﻿ <<div class="navbar bg-primary navbar-expand-lg navbar-fixed-top">
+    <div style="padding:4px">
+        <a class="navbar-brand" href="#">
+            <img src="~/Pictures/transparent.png" alt="logo" style="width:90px;">
+        </a>
+    </div>
+    <div style="margin-top:0.2rem; margin-left:65%">
+        <span class="navbar-text" style="padding-right:1rem">
+            <label> Yahil Rathod:</label>
+            <label>Plumber,</label>
+            <label>Laudium, Gauteng</label>
+        </span>
+        <span> <i class="glyphicon glyphicon-user" style="font-size:35px;cursor:pointer "></i></span>
+        <span style="padding-left:2rem;font-size:25px;cursor:pointer" class="glyphicon glyphicon-log-out" data-toggle="modal" data-target="#logout"></span>
+    </div>
+</div>
+<div class="container">
     <div class="row">
         <div class="col-md-5">
-            <div style="float:right;margin-top:5rem;margin-right:20rem;">
-                <h4> Yahil Rathod</h4>
-                <h5>Plumber</h5>
-                <h5>Laudium, Gauteng</h5>
-            </div>
-            <i class="glyphicon glyphicon-user" style="font-size:100px; margin-top:3rem;"></i>
+            
         </div>
 
 
         <div class="text-center col-md-2" style="margin-top:8rem;">
-
+            <h1> Potential Clients</h1>
 
         </div>
 
         <div class="col-md-5">
-            <div style="margin-bottom:90px">
-                <img style="width:60%; height:60%;float:right;" src="~/Pictures/Logo.jpeg" />
-            </div>
+           
 
         </div>
 
     </div>
 
-    <div class="container" style="padding-bottom:2rem">
-        <label for="table ">Who has gotten in touch with you</label>
+    <div class="container" style="padding-bottom:2rem;padding-top:6rem">
+        
         <table id="table" class="table  table-hover table-responsive"
                style="margin-left: auto; margin-right: auto;">
             <tr>
@@ -33,6 +42,7 @@
                 <th>Business Name</th>
                 <th>Email</th>
                 <th>Date</th>
+                <th>Profile</th>
             </tr>
 
 
@@ -41,24 +51,27 @@
                 <td>N/A</td>
                 <td>Mike@gmail.com </td>
                 <td>01/02/2020 </td>
+                <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer"  onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
             </tr>
             <tr>
                 <td>Jane</td>
                 <td>Sasol</td>
                 <td>jane@mweb.co.za </td>
                 <td>06/03/2020 </td>
+                <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer"  onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
             </tr>
             <tr>
                 <td>Nemo</td>
                 <td>EY</td>
                 <td>Nemo@mweb.co.za</td>
                 <td>02/04/2020 </td>
+                <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer"  onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
             </tr>
 
         </table>
 
     </div>
-    <div style="padding-bottom:9rem">
+    <div style="padding-bottom:9rem;padding-top:3rem">
         <div style="float:right;">
             <button style="width:100px" class="btn btn-primary " onclick="window.location.href='@Url.Action("User_Profile", "Freelancer")'">Go Back</button>
             <br />

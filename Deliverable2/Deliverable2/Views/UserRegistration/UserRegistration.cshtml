@@ -21,7 +21,15 @@
         <h3>Some Account details:</h3>
     </div>
     <div class="col-md-6 form-horizontal">
-
+        <div class="form-group form-inline" style="margin-left:4rem">
+            <label>Account type :</label>
+            <select class="form-control" style="width:200px;margin-left:4.5rem">
+                <option value="" selected disabled>Type</option>
+                <option value="OFreelancer">Freelancer</option>
+                <option value="OEmployer">Employer</option>
+            </select>
+        </div>
+        <br />
         <div class="form-group form-inline" style="margin-left:4rem">
             <label>Username:</label>
 
@@ -62,7 +70,7 @@
 
     </div>
 </div>
-<br />
+
 <div>
     <div style="margin-left:80%">
         <button class="btn btn-primary" style="width:100px" onclick="location.href='@Url.Action("Login", "Login")'" >Go Back</button>
