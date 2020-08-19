@@ -14,25 +14,33 @@ namespace Deliverable2.Controllers
             return View();
         }
 
-        //public ActionResult EmployerFreelancer(String Dropdown)
-        //{
-          
+        public ActionResult EmployerFreelancer(String Dropdown)
+        {
 
-        //    //if (Dropdown == "0")
-        //    //{
-        //    //    ViewBag.message = "invalid";
-        //    //}
-        //    //else if (Dropdown == "1")
-        //    //{
-        //    //   return RedirectToAction("FreelancerRegistration", "UserRegistration");
-        //    //}
+            {
+                if (Dropdown != null)
+                {
+                    if (Dropdown == "0")
+                    {
+                        return RedirectToAction("UserRegistration", "UserRegistration");
+                    }
 
-        //    //else if (Dropdown == "2")
-        //    //{
-        //    //   return RedirectToAction("EmployerRegistration", "UserRegistration");
-        //    //}
-        //  return View()
-        //}
+                    else if (Dropdown == "1")
+                    {
+                        return RedirectToAction("FreelancerRegistration", "UserRegistration");
+                    }
+
+                    else if (Dropdown == "2")
+                    {
+                        return RedirectToAction("EmployerRegistration", "UserRegistration");
+                    }
+
+
+                }
+                return View("UserRegistration");
+            }
+
+        }
 
 
 
