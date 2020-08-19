@@ -1,4 +1,5 @@
-﻿<div class="row" style="padding-bottom:15px">
+﻿
+<div class="row" style="padding-bottom:15px">
     <div class="col-md-5">
         <img style="width:50%; height:50%;" src="~/Pictures/Logo2.jpeg" />
 
@@ -24,7 +25,7 @@
     <div class="col-md-6 form-horizontal">
         <div class="form-group form-inline" style="margin-left:4rem">
             <label>Account type :</label>
-            <select class="form-control" id="Dropdown" name="Dropdown" style="width:200px;margin-left:4.5rem">
+            <select class="form-control"  id="ma" onchange="somefunction()" name="Dropdown" style="width:200px;margin-left:4.5rem">
                 <option value="0" selected disabled>Type</option>
                 <option value="1">Freelancer</option>
                 <option value="2">Employer</option>
@@ -76,6 +77,7 @@
     <div style="margin-left:80%">
         <button class="btn btn-primary" style="width:100px" onclick="location.href='@Url.Action("Login", "Login")'">Go Back</button>
         <button class="btn btn-primary" type="submit" onclick="location.href='@Url.Action("EmployerRegistration", "UserRegistration")'" id="submitButton" style="width:100px">Next Step</button>
+       
     </div>
 
 </div>
@@ -89,6 +91,5 @@
 
     });
 </script>*@
-
 
 
