@@ -43,6 +43,7 @@
                 <th>Email</th>
                 <th>Date</th>
                 <th>Profile</th>
+                <th>Booking Request</th>
             </tr>
 
 
@@ -52,13 +53,15 @@
                 <td>Mike@gmail.com </td>
                 <td>01/02/2020 </td>
                 <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer"  onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
+                <td><span class="glyphicon glyphicon-envelope" data-toggle="modal" data-target="#booking"></span></p> </td>            
             </tr>
             <tr>
                 <td>Jane</td>
                 <td>Sasol</td>
                 <td>jane@mweb.co.za </td>
                 <td>06/03/2020 </td>
-                <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer"  onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
+                <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer" onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
+                <td><span class="glyphicon glyphicon-envelope" data-toggle="modal" data-target="#booking"></span></p> </td>
             </tr>
             <tr>
                 <td>Nemo</td>
@@ -66,7 +69,8 @@
                 <td>Nemo@mweb.co.za</td>
                 <td>02/04/2020 </td>
                 <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer"  onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
-            </tr>
+                <td><span class="glyphicon glyphicon-envelope" data-toggle="modal" data-target="#booking"></span></p> </td>
+            </tr> 
 
         </table>
 
@@ -77,6 +81,33 @@
             <br />
             <div style="padding-top:1rem">
                 <button class="btn btn-primary ">Print Report</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="logoutCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteLongTitle">You have a Booking Request</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Mike Peterson</h6>
+                Hi there, I need some plumbing help to fix pipes in my roof. Would you be able to assist? Probably Im free around 3pm on Monday the 16th if that is good with you
+                Thanks.
+               
+
+            </div>
+            <div class="modal-footer">
+
+                <i>For more details and to reply to this booking request, please check your email. Thank you.  </i>
+                <td><i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer" onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i></td>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
+
             </div>
         </div>
     </div>
