@@ -1,12 +1,28 @@
 ﻿<style>
-    .modal {
+
+    /*.modal {
         position: absolute;
         float: left;
         left: 50%;
         top: 60%;
         transform: translate(-50%, -50%);
         height: 500px;
+    }*/
+
+    
+
+    .modal-header, h5, .close {
+        background-color: steelblue;
+        color: white !important;
+        text-align: center;
+        font-size: 20px;
     }
+
+    .modal-footer {
+        background-color: #f9f9f9;
+    }
+
+
     .zoom:hover {
         box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         transform: scale(1.1);
@@ -140,7 +156,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteLongTitle">Log out</h5>
+                    <h5 class="modal-title" id="deleteLongTitle">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

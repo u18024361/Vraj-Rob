@@ -1,10 +1,24 @@
-﻿ <<div class="navbar bg-primary navbar-expand-lg navbar-fixed-top">
+﻿<style>
+
+    .modal-header, h5, .close {
+        background-color: steelblue;
+        color: white !important;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .modal-footer {
+        background-color: #f9f9f9;
+    }
+</style> 
+
+<<div class="navbar bg-primary navbar-expand-lg navbar-fixed-top">
     <div style="padding:4px">
         <a class="navbar-brand" href="#">
             <img src="~/Pictures/Logo2.jpeg" alt="logo" style="width:75px;border-radius: 15px;">
         </a>
     </div>
-    <div style="margin-top:0.2rem; margin-left:65%">
+    <div style="margin-top:0.2rem; margin-left:70%">
         <span class="navbar-text" style="padding-right:1rem">
             <label> Yahil Rathod:</label>
             <label>Plumber,</label>
@@ -96,7 +110,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h6>Mike Peterson</h6>
+                <h4><b>From: Mike Peterson</b></h4>
                 Hi there, I need some plumbing help to fix pipes in my roof. Would you be able to assist? Probably Im free around 3pm on Monday the 16th if that is good with you
                 Thanks.
                
@@ -105,7 +119,7 @@
             <div class="modal-footer">
 
                 <i>For more details and to reply to this booking request, please check your email. Thank you.  </i>
-                <i class="glyphicon glyphicon-info-sign" style="font-size:20px;cursor:pointer" onclick="window.location.href='@Url.Action("Employer_Profile", "Freelancer")'"></i>
+                
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
 
             </div>
