@@ -1,14 +1,25 @@
 ﻿<head>
-    <style>
-        .modal {
-            position: absolute;
-            float: left;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            height: 500px;
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+
+        <style >
+
+        .modal-header, .close {
+            background-color: #5cb85c;
+            color: white !important;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .modal-footer {
+            background-color: #f9f9f9;
         }
     </style>
+
 </head>
 
 
@@ -25,26 +36,75 @@
 </div>
 <div class="text-center">
     <h3>Don't have an account?</h3>
-   
+
 </div>
 <div class="text-center" style="padding-top:1rem">
     <a href='@Url.Action("UserRegistration", "UserRegistration")'><h4>Register here</h4></a>
     @*<button style="width:200px;margin:1rem" class="btn btn-primary" onclick="location.href='@Url.Action("FLUserReg", "UserRegistration")'">Freelancer</button>
-    <button style="width:200px;margin:1rem" class="btn btn-primary" onclick="location.href='@Url.Action("UserRegistration", "UserRegistration")'">Employer</button>*@
+        <button style="width:200px;margin:1rem" class="btn btn-primary" onclick="location.href='@Url.Action("UserRegistration", "UserRegistration")'">Employer</button>*@
 
 </div>
 
-<div class="modal " id="myModal">
+    <div class="container">
+       
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                                <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                                <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success btn-block" onclick= click() ><span class="glyphicon glyphicon-off"></span> Login</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                        <p>Not a member? <a href='@Url.Action("UserRegistration", "UserRegistration")'>Sign Up</a></p>
+                        <p>Forgot <a onclick="location.href='@Url.Action("Password", "Login")'">Password?</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @*<script>
+        $(document).ready(click () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+        });
+    </script>*@
+
+
+
+
+@*<div class="modal " id="myModal">
     <div class="modal-dialog">
         <div class="modal-content">
 
-            <!-- Modal Header -->
+             Modal Header 
             <div class="modal-header">
                 <h4 class="modal-title">Sign in</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
-            <!-- Modal body -->
+             Modal body 
             <div class="modal-body">
                 <div class="form-group form-inline" style="margin-left:8rem">
                     <label>Email Address:</label>
@@ -53,12 +113,12 @@
                 <br />
                 <div class="form-group form-inline" style="margin-left:8rem">
                     <label>Password:</label>
-                    <input type="password" class="form-control"  style="margin-left:4rem" />
+                    <input type="password" class="form-control" style="margin-left:4rem" />
                 </div>
                 <br />
                 <div class="text-center">
                     <div>
-                        <button class="btn btn-primary"  id="signin" value="Submit" onclick="click()">Sign In</button>
+                        <button class="btn btn-primary" id="signin" value="Submit" onclick="click()">Sign In</button>
 
                     </div>
                     <br />
@@ -72,28 +132,28 @@
 
         </div>
     </div>
-</div>
+</div>*@
 
 <script>
     function click()
     {
-        if (document.getElementById("signin").value == "employer@example.co.za")
+        if (document.getElementById("usrname").value == "employer@example.co.za")
         {
             '@Url.Action("Index", "Employer")';
         }
-        else if (document.getElementById("signin").value == "freelancer@example.co.za")
+        else if (document.getElementById("usrname").value == "freelancer@example.co.za")
         {
             '@Url.Action("User_Profile", "Freelancer")';
         }
 
-        else if (document.getElementById("signin").value == "admin@example.co.za")
+        else if (document.getElementById("usrname").value == "admin@example.co.za")
         {
 
             '@Url.Action("AdminHome", "Admin")';
 
         }
 
-        
+
     }
 
 </script>
