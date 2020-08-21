@@ -68,9 +68,10 @@
                                 <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
                                 <input type="text" class="form-control" id="psw" placeholder="Enter password">
                             </div>
-                            
-                            <button type="submit" class="btn btn-success btn-block" onclick= click() ><span class="glyphicon glyphicon-off"></span> Login</button>
+
+
                         </form>
+                        <button class="btn btn-success btn-block" onclick="location.href='@Url.Action("AdminHome", "Admin")'"><span class="glyphicon glyphicon-off"></span> Login</button>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
@@ -134,7 +135,7 @@
     </div>
 </div>*@
 
-<script>
+@*<script>
     function click()
     {
         if (document.getElementById("usrname").value == "employer@example.co.za")
@@ -156,7 +157,7 @@
 
     }
 
-</script>
+</script>*@
 
 
 
